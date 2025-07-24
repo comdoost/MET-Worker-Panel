@@ -99,7 +99,7 @@ async function buildWorker() {
         });
     
         console.log('✅ Worker obfuscated successfuly!');
-        finalCode = obfuscationResult.getObfuscatedCode();
+        finalCode = minifiedCode.code; //obfuscationResult.getObfuscatedCode();
     }
 
     const worker = `// @ts-nocheck\n${finalCode}`;
